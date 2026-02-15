@@ -1,14 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="/assets/img/LogoCircular.png">
-    <link rel="stylesheet" href="/assets/css/productos.css">
+    <title>Productos - Pangea Relics</title>
     <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/productos.css">
 </head>
+
 <body>
-    
+    <header class="encabezado">
+        <div class="contenedor-encabezado">
+            <a href="/" class="logotipo">
+                <h1>Pangea Relics</h1>
+            </a>
+            
+            <nav class="navegacion">
+                <ul class="lista-navegacion">
+                    <li><a href="/" class="enlace-nav">Inicio</a></li>
+                    <li><a href="/pages/productos.html" class="enlace-nav">Productos</a></li>
+                    <li><a href="/pages/mision-vision.html" class="enlace-nav">Misión & Visión</a></li>
+                    <li><a href="/pages/contacto.html" class="enlace-nav">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button class="boton-menu" id="botonMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="seccion-hero-pagina">
+        <div class="contenido-hero-pagina">
+            <h1>Nuestro Catálogo</h1>
+            <p>Explora nuestra completa colección de antigüedades auténticas</p>
+        </div>
+    </section>
+
+    <section class="seccion-filtros-productos">
+        <div class="contenedor-pagina">
+            <div class="panel-filtros">
+                <h3>Filtrar por</h3>
+                <div class="grupo-filtro">
+                    <h4>Categoría</h4>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="categoria" value="pinturas">
+                        Pinturas
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="categoria" value="joyas">
+                        Joyas
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="categoria" value="esculturas">
+                        Esculturas
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="categoria" value="relojes">
+                        Relojes
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="categoria" value="monedas">
+                        Monedas
+                    </label>
+                </div>
+
+                <div class="grupo-filtro">
+                    <h4>Rango de Precio</h4>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="precio" value="0-50000">
+                        Menos de $50,000
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="precio" value="50000-100000">
+                        $50,000 - $100,000
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="precio" value="100000-200000">
+                        $100,000 - $200,000
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="radio" name="precio" value="200000+">
+                        Más de $200,000
+                    </label>
+                </div>
+
+                <div class="grupo-filtro">
+                    <h4>Disponibilidad</h4>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="disponibilidad" value="disponible">
+                        En stock
+                    </label>
+                    <label class="filtro-opcion">
+                        <input type="checkbox" name="disponibilidad" value="consultar">
+                        Consultar
+                    </label>
+                </div>
+            </div>
+
+            <div class="contenedor-productos">
+                <div class="encabezado-productos-pagina">
+                    <p>Mostrando 12 productos</p>
+                    <select class="ordenar-productos">
+                        <option value="reciente">Más reciente</option>
+                        <option value="precio-menor">Precio: menor a mayor</option>
+                        <option value="precio-mayor">Precio: mayor a menor</option>
+                        <option value="nombre">Nombre A-Z</option>
+                    </select>
+                </div>
+
+                <div class="cuadrilla-productos-pagina">
+                    <article class="tarjeta-producto-pagina">
+                        <div class="imagen-producto-pagina">
+                            <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125092496-product-painting.jpg" alt="Pintura Renacentista">
+                        </div>
+                        <div class="informacion-producto-pagina">
+                            <span class="categoria-badge">Pinturas</span>
+                            <h3>Pintura Renacentista</h3>
+                            <p class="descripcion-corta">Óleo sobre lienzo del siglo XVI</p>
+                            <p class="precio-producto-pagina">$185,000</p>
+                            <div class="acciones-producto">
+                                <button class="boton boton-primario">Ver detalle</button>
+                                <button class="boton-favorito">♡</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto-pagina">
+                        <div class="imagen-producto-pagina">
+                            <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125094060-product-watch.jpg" alt="Reloj de Bolsillo Antiguo">
+                        </div>
+                        <div class="informacion-producto-pagina">
+                            <span class="categoria-badge">Relojes</span>
+                            <h3>Reloj de Bolsillo Antiguo</h3>
+                            <p class="descripcion-corta">Mecanismo suizo del siglo XIX</p>
+                            <p class="precio-producto-pagina">$42,500</p>
+                            <div class="acciones-producto">
+                                <button class="boton boton-primario">Ver detalle</button>
+                                <button class="boton-favorito">♡</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto-pagina">
+                        <div class="imagen-producto-pagina">
+                            <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125094591-product-jewelry.jpg" alt="Collar Victoriano">
+                        </div>
+                        <div class="informacion-producto-pagina">
+                            <span class="categoria-badge">Joyas</span>
+                            <h3>Collar Victoriano</h3>
+                            <p class="descripcion-corta">Oro y diamantes naturales</p>
+                            <p class="precio-producto-pagina">$128,000</p>
+                            <div class="acciones-producto">
+                                <button class="boton boton-primario">Ver detalle</button>
+                                <button class="boton-favorito">♡</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto-pagina">
+                        <div class="imagen-producto-pagina">
+                            <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125096482-product-sculpture.jpg" alt="Escultura Bronce S.XIX">
+                        </div>
+                        <div class="informacion-producto-pagina">
+                            <span class="categoria-badge">Esculturas</span>
+                            <h3>Escultura Bronce S.XIX</h3>
+                            <p class="descripcion-corta">Obra maestra francesa del 1800</p>
+                            <p class="precio-producto-pagina">$95,000</p>
+                            <div class="acciones-producto">
+                                <button class="boton boton-primario">Ver detalle</button>
+                                <button class="boton-favorito">♡</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto-pagina">
+                        <div class="imagen-producto-pagina">
+                            <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125106221-product-book.jpg" alt="Libro Raro Primera Edición">
+                        </div>
+                        <div class="informacion-producto-pagina">
+                            <span class="categoria-badge">Libros</span>
+                            <h3>Libro Raro Primera Edición</h3>
+                            <p class="descripcion-corta">Primera edición de 1887</p>
+                            <p class="precio-producto-pagina">$38,000</p>
+                            <div class="acciones-producto">
+                                <button class="boton boton-primario">Ver detalle</button>
+                                <button class="boton-favorito">♡</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-producto-pagina">
+                        <div class="imagen-producto-pagina">
+                            <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125100486-product-porcelain.jpg" alt="Porcelana China Ming">
+                        </div>
+                        <div class="informacion-producto-pagina">
+                            <span class="categoria-badge">Porcelanas</span>
+                            <h3>Porcelana China Ming</h3>
+                            <p class="descripcion-corta">Porcelana azul y blanca dinastía Ming</p>
+                            <p class="precio-producto-pagina">$156,000</p>
+                            <div class="acciones-producto">
+                                <button class="boton boton-primario">Ver detalle</button>
+                                <button class="boton-favorito">♡</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="paginacion">
+                    <button class="boton-paginacion">← Anterior</button>
+                    <span class="numero-pagina">1</span>
+                    <span class="numero-pagina">2</span>
+                    <span class="numero-pagina">3</span>
+                    <button class="boton-paginacion">Siguiente →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="columna-pie">
+                <h2 class="logotipo-pie">Pangea Relics</h2>
+                <p class="descripcion-pie">
+                    Compra y venta de antigüedades auténticas.
+                    Piezas certificadas con historia y valor.
+                </p>
+
+                <div class="redes-sociales">
+                    <a href="#" class="enlace-red">Facebook</a>
+                    <a href="#" class="enlace-red">Instagram</a>
+                    <a href="#" class="enlace-red">Twitter</a>
+                </div>
+            </div>
+
+            <div class="columna-pie">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="lista-pie">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/pages/productos.html">Productos</a></li>
+                    <li><a href="/pages/mision-vision.html">Misión & Visión</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="columna-pie">
+                <h3>Contacto</h3>
+                <ul class="lista-contacto">
+                    <li>Av. Libertador 1234</li>
+                    <li>Buenos Aires, Argentina</li>
+                    <li>Tel: +54 11 4567-8900</li>
+                    <li>info@pangearelics.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fondo-pie">
+            <p>© 2026 Pangea Relics. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/productos.js"></script>
 </body>
+
 </html>
