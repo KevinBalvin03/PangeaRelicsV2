@@ -9,6 +9,16 @@
     justify-content: center;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("/assets/img/img-Products/imgBackground.png");
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed; 
+}
 .contenido-hero-pagina h1 {
     font-size: 3rem;
     margin-bottom: var(--espaciado-md);
@@ -34,13 +44,23 @@
     gap: var(--espaciado-3xl);
 }
 
-.panel-filtros {
+ .panel-filtros {
     background-color: var(--color-gris-claro);
     padding: var(--espaciado-xl);
     border-radius: var(--radio-borde);
     height: fit-content;
     position: sticky;
     top: 100px;
+    list-style: none;
+ }
+
+li{
+    margin-bottom: 35px;
+}
+
+a{
+ color: black;   
+ text-decoration: none;
 }
 
 .panel-filtros h3 {
