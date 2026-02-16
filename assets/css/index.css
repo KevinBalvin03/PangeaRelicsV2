@@ -1,6 +1,6 @@
 .seccion-hero {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(45, 45, 45, 0.85) 100%), 
-                url('https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125089000-hero-bg.jpg') center/cover no-repeat;
+                url('/assets/img/fondo-hero') center/cover no-repeat;
     color: white;
     padding: var(--espaciado-4xl) 5%;
     text-align: center;
@@ -180,6 +180,13 @@
 
 .seccion-categorias {
     padding: var(--espaciado-3xl) 5%;
+    background-color: #262626;
+}
+.seccion-categorias .encabezado-seccion h2 {
+    color: var(--color-texto-claro);
+}
+.seccion-categorias .encabezado-seccion p {
+    color: var(--color-texto-claro);
 }
 
 .cuadrilla-categorias {
