@@ -19,9 +19,9 @@ PangeaRelicsV2/
 │   ├── js/
 │   │   ├── global.js          # JavaScript global
 │   │   ├── index.js           # JavaScript página principal
-│   │   ├── productos.js       # JavaScript galería de productos
-│   │   ├── contacto.js        # JavaScript formulario
-│   │   └── mision-vision.js   # JavaScript misión y visión
+│   │   
+│   │   
+│   │   
 │   └── img/
 │       └── [imágenes]         # Recursos de imagen
 ├── components/
@@ -45,15 +45,6 @@ El proyecto utiliza variables CSS estandarizadas en español:
 - `--color-gris-claro`: #f9f9f9
 - `--color-texto-principal`: #333
 
-### Espaciados
-- `--espaciado-xs`: 5px
-- `--espaciado-sm`: 10px
-- `--espaciado-md`: 15px
-- `--espaciado-lg`: 20px
-- `--espaciado-xl`: 40px
-- `--espaciado-2xl`: 60px
-- `--espaciado-3xl`: 80px
-- `--espaciado-4xl`: 120px
 
 ### Transiciones
 - `--transicion-rapida`: 0.2s ease
@@ -134,22 +125,7 @@ El proyecto es completamente responsivo con breakpoints en:
 - 768px (tablets pequeños)
 - 480px (móviles)
 
-## Convenciones de Código
 
-- **HTML**: Nombres de clases en español descriptivos
-  - Ejemplo: `contenedor-encabezado`, `tarjeta-producto`
-  
-- **CSS**: Variables con prefijo `--` en español
-  - Ejemplo: `--color-primario`, `--espaciado-lg`
-  
-- **JavaScript**: Funciones descriptivas en camelCase
-  - Ejemplo: `inicializarMenuMobile()`, `validarYEnviarFormulario()`
-
-## Cómo Usar
-
-1. **Abrir en navegador**: Abre `index.html` en tu navegador
-2. **Navegar**: Usa el menú de navegación para ir entre páginas
-3. **Responsive**: Redimensiona la ventana para ver el diseño adaptativo
 
 ## Personalización
 
