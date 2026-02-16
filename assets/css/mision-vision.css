@@ -20,6 +20,25 @@
     border-left: 5px solid var(--color-primario);
 }
 
+.contenido-hero-pagina {
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.contenido-hero-pagina h1 {
+    color: #d4af37;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contenido-hero-pagina p {
+    color: #d4af37;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+
 .tarjeta-mision-vision:hover {
     transform: translateY(-8px);
     box-shadow: var(--sombra-media);

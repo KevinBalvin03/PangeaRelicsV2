@@ -1,35 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    aplicarTemaGlobal();
+document.addEventListener("DOMContentLoaded", function () {
+
+    cargarComponente("header", "/components/header.html");
+    cargarComponente("footer", "/components/footer.html");
+
 });
 
-function aplicarTemaGlobal() {
-    const temaGuardado = localStorage.getItem('tema') || 'claro';
-    aplicarTema(temaGuardado);
-}
-
-function aplicarTema(tema) {
-    if (tema === 'oscuro') {
-        document.documentElement.style.setProperty('--color-texto-principal', '#f0f0f0');
-        document.documentElement.style.setProperty('--color-oscuro', '#0a0a0a');
-    } else {
-        document.documentElement.style.setProperty('--color-texto-principal', '#333');
-        document.documentElement.style.setProperty('--color-oscuro', '#1a1a1a');
-    }
-    localStorage.setItem('tema', tema);
-}
-
-function rastrearEvento(evento, datos) {
-    console.log('Evento:', evento, 'Datos:', datos);
-}
-
-function formatearPrecio(precio) {
-    return new Intl.NumberFormat('es-AR', {
-        style: 'currency',
-        currency: 'ARS'
-    }).format(precio);
-}
-
-function obtenerParametroURL(parametro) {
-    const parametros = new URLSearchParams(window.location.search);
-    return parametros.get(parametro);
+function cargarComponente(id, ruta) {
+    fetch(ruta)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error cargando " + ruta);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById(id).innerHTML = data;
+        })
+        .catch(error => console.error(error));
 }
