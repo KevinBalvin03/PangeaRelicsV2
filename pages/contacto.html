@@ -1,14 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="/assets/img/LogoCircular.png">
-    <link rel="stylesheet" href="/assets/css/contacto.css">
+    <title>Contacto - Pangea Relics</title>
     <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/contacto.css">
 </head>
+
 <body>
-    
+    <header class="encabezado">
+        <div class="contenedor-encabezado">
+            <a href="/" class="logotipo">
+                <h1>Pangea Relics</h1>
+            </a>
+            
+            <nav class="navegacion">
+                <ul class="lista-navegacion">
+                    <li><a href="/" class="enlace-nav">Inicio</a></li>
+                    <li><a href="/pages/productos.html" class="enlace-nav">Productos</a></li>
+                    <li><a href="/pages/mision-vision.html" class="enlace-nav">Misión & Visión</a></li>
+                    <li><a href="/pages/contacto.html" class="enlace-nav">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button class="boton-menu" id="botonMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="seccion-hero-pagina">
+        <div class="contenido-hero-pagina">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte con tus antigüedades</p>
+        </div>
+    </section>
+
+    <section class="seccion-contacto">
+        <div class="contenedor-contacto">
+            <div class="info-contacto">
+                <h2>Información de Contacto</h2>
+                
+                <div class="bloque-contacto">
+                    <h3>Ubicación</h3>
+                    <p>Av. Libertador 1234</p>
+                    <p>Buenos Aires, Argentina</p>
+                </div>
+
+                <div class="bloque-contacto">
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:+541145678900">+54 11 4567-8900</a></p>
+                    <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                    <p>Sábado: 10:00 AM - 4:00 PM</p>
+                </div>
+
+                <div class="bloque-contacto">
+                    <h3>Correo Electrónico</h3>
+                    <p><a href="mailto:info@pangearelics.com">info@pangearelics.com</a></p>
+                    <p>Responderemos en 24 horas</p>
+                </div>
+
+                <div class="bloque-contacto">
+                    <h3>Redes Sociales</h3>
+                    <div class="redes-sociales-contacto">
+                        <a href="#" class="enlace-red-grande">Facebook</a>
+                        <a href="#" class="enlace-red-grande">Instagram</a>
+                        <a href="#" class="enlace-red-grande">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="bloque-contacto">
+                    <a href="https://wa.me/5491145678900" class="boton boton-primario">Contactar por WhatsApp</a>
+                </div>
+            </div>
+
+            <form class="formulario-contacto" id="formularioContacto">
+                <h2>Envíanos un Mensaje</h2>
+
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="tema">Tema *</label>
+                    <select id="tema" name="tema" required>
+                        <option value="">Selecciona un tema</option>
+                        <option value="compra">Compra de antigüedad</option>
+                        <option value="venta">Venta de antigüedad</option>
+                        <option value="valuacion">Solicitar valuación</option>
+                        <option value="certificacion">Certificación</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label class="checkbox-contacto">
+                        <input type="checkbox" name="terminos" required>
+                        Acepto los términos y condiciones
+                    </label>
+                </div>
+
+                <button type="submit" class="boton boton-primario">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="seccion-horarios">
+        <div class="contenedor-horarios">
+            <h2>Horarios de Atención</h2>
+            <div class="tabla-horarios">
+                <div class="fila-horarios">
+                    <span class="dia">Lunes a Viernes</span>
+                    <span class="hora">9:00 AM - 1:00 PM</span>
+                    <span class="hora">2:00 PM - 6:00 PM</span>
+                </div>
+                <div class="fila-horarios">
+                    <span class="dia">Sábado</span>
+                    <span class="hora">10:00 AM - 4:00 PM</span>
+                </div>
+                <div class="fila-horarios">
+                    <span class="dia">Domingo</span>
+                    <span class="hora">Cerrado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="columna-pie">
+                <h2 class="logotipo-pie">Pangea Relics</h2>
+                <p class="descripcion-pie">
+                    Compra y venta de antigüedades auténticas.
+                    Piezas certificadas con historia y valor.
+                </p>
+
+                <div class="redes-sociales">
+                    <a href="#" class="enlace-red">Facebook</a>
+                    <a href="#" class="enlace-red">Instagram</a>
+                    <a href="#" class="enlace-red">Twitter</a>
+                </div>
+            </div>
+
+            <div class="columna-pie">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="lista-pie">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/pages/productos.html">Productos</a></li>
+                    <li><a href="/pages/mision-vision.html">Misión & Visión</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="columna-pie">
+                <h3>Contacto</h3>
+                <ul class="lista-contacto">
+                    <li>Av. Libertador 1234</li>
+                    <li>Buenos Aires, Argentina</li>
+                    <li>Tel: +54 11 4567-8900</li>
+                    <li>info@pangearelics.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fondo-pie">
+            <p>© 2026 Pangea Relics. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/contacto.js"></script>
 </body>
+
 </html>

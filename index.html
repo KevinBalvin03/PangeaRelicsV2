@@ -1,17 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pangea Relics Home</title>
+    <title>Pangea Relics - Compra y Venta de Antigüedades</title>
     <link rel="icon" href="/assets/img/LogoCircular.png">
-    <link rel="stylesheet" href="/assets/css/index.css">
     <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 
 <body>
+    <header class="encabezado">
+        <div class="contenedor-encabezado">
+            <a href="/" class="logotipo">
+                <h1>Pangea Relics</h1>
+            </a>
+            
+            <nav class="navegacion">
+                <ul class="lista-navegacion">
+                    <li><a href="/" class="enlace-nav">Inicio</a></li>
+                    <li><a href="/pages/productos.html" class="enlace-nav">Productos</a></li>
+                    <li><a href="/pages/mision-vision.html" class="enlace-nav">Misión & Visión</a></li>
+                    <li><a href="/pages/contacto.html" class="enlace-nav">Contacto</a></li>
+                </ul>
+            </nav>
 
+            <button class="boton-menu" id="botonMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="seccion-hero">
+        <div class="contenido-hero">
+            <h1>Compra y venta de antigüedades auténticas</h1>
+            <p>Piezas con historia, certificadas y valoradas por expertos</p>
+            <div class="botones-hero">
+                <a href="/pages/productos.html" class="boton boton-primario">Ver catálogo</a>
+                <a href="/pages/contacto.html" class="boton boton-secundario">Vender una pieza</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-productos-destacados">
+        <div class="encabezado-seccion">
+            <h2>Productos Destacados</h2>
+            <p>Selección de piezas excepcionales de nuestro catálogo</p>
+        </div>
+        <div class="cuadrilla-productos">
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125092496-product-painting.jpg" alt="Pintura Renacentista">
+                </div>
+                <div class="informacion-producto">
+                    <span class="estado-producto">Disponible</span>
+                    <span class="categoria-producto">Pinturas</span>
+                    <h3>Pintura Renacentista</h3>
+                    <p class="precio-producto">$185,000</p>
+                    <a href="#" class="enlace-detalles">Ver detalle</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125094060-product-watch.jpg" alt="Reloj de Bolsillo Antiguo">
+                </div>
+                <div class="informacion-producto">
+                    <span class="estado-producto">Disponible</span>
+                    <span class="categoria-producto">Relojes</span>
+                    <h3>Reloj de Bolsillo Antiguo</h3>
+                    <p class="precio-producto">$42,500</p>
+                    <a href="#" class="enlace-detalles">Ver detalle</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125094591-product-jewelry.jpg" alt="Collar Victoriano">
+                </div>
+                <div class="informacion-producto">
+                    <span class="estado-producto">Disponible</span>
+                    <span class="categoria-producto">Joyas</span>
+                    <h3>Collar Victoriano</h3>
+                    <p class="precio-producto">$128,000</p>
+                    <a href="#" class="enlace-detalles">Ver detalle</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125096482-product-sculpture.jpg" alt="Escultura Bronce S.XIX">
+                </div>
+                <div class="informacion-producto">
+                    <span class="estado-producto">Disponible</span>
+                    <span class="categoria-producto">Esculturas</span>
+                    <h3>Escultura Bronce S.XIX</h3>
+                    <p class="precio-producto">$95,000</p>
+                    <a href="#" class="enlace-detalles">Ver detalle</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125106221-product-book.jpg" alt="Libro Raro Primera Edición">
+                </div>
+                <div class="informacion-producto">
+                    <span class="estado-producto">Disponible</span>
+                    <span class="categoria-producto">Libros</span>
+                    <h3>Libro Raro Primera Edición</h3>
+                    <p class="precio-producto">$38,000</p>
+                    <a href="#" class="enlace-detalles">Ver detalle</a>
+                </div>
+            </article>
+
+            <article class="tarjeta-producto">
+                <div class="imagen-producto">
+                    <img src="https://lrggyvioreorxttbasgi.supabase.co/storage/v1/object/public/app-assets/7408/images/1771125100486-product-porcelain.jpg" alt="Porcelana China Ming">
+                </div>
+                <div class="informacion-producto">
+                    <span class="estado-producto">Disponible</span>
+                    <span class="categoria-producto">Porcelanas</span>
+                    <h3>Porcelana China Ming</h3>
+                    <p class="precio-producto">$156,000</p>
+                    <a href="#" class="enlace-detalles">Ver detalle</a>
+                </div>
+            </article>
+        </div>
+        <div class="pie-seccion">
+            <a href="/pages/productos.html" class="boton boton-primario">Ver todo el catálogo</a>
+        </div>
+    </section>
+
+    <section class="seccion-categorias">
+        <div class="encabezado-seccion">
+            <h2>Categorías Principales</h2>
+            <p>Explore nuestra colección por categoría</p>
+        </div>
+        <div class="cuadrilla-categorias">
+            <a href="/pages/productos.html" class="tarjeta-categoria">
+                <h3>Pinturas</h3>
+                <p>24 piezas</p>
+            </a>
+            <a href="/pages/productos.html" class="tarjeta-categoria">
+                <h3>Joyas</h3>
+                <p>38 piezas</p>
+            </a>
+            <a href="/pages/productos.html" class="tarjeta-categoria">
+                <h3>Esculturas</h3>
+                <p>16 piezas</p>
+            </a>
+            <a href="/pages/productos.html" class="tarjeta-categoria">
+                <h3>Relojes</h3>
+                <p>29 piezas</p>
+            </a>
+            <a href="/pages/productos.html" class="tarjeta-categoria">
+                <h3>Monedas</h3>
+                <p>42 piezas</p>
+            </a>
+            <a href="/pages/productos.html" class="tarjeta-categoria">
+                <h3>Porcelanas</h3>
+                <p>31 piezas</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="seccion-como-funciona">
+        <div class="encabezado-seccion">
+            <h2>Cómo Funciona</h2>
+        </div>
+        <div class="cuadrilla-pasos">
+            <div class="paso">
+                <div class="numero-paso">1</div>
+                <h3>Compra</h3>
+                <p>Explore nuestro catálogo, seleccione su pieza y contáctenos. Ofrecemos asesoramiento experto y certificados de autenticidad.</p>
+            </div>
+            <div class="paso">
+                <div class="numero-paso">2</div>
+                <h3>Venta</h3>
+                <p>¿Tiene una antigüedad para vender? Nuestros expertos realizan valuaciones profesionales y ofrecen precios justos del mercado.</p>
+            </div>
+            <div class="paso">
+                <div class="numero-paso">3</div>
+                <h3>Certificación</h3>
+                <p>Todas nuestras piezas son autenticadas y certificadas por expertos reconocidos internacionalmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-testimonios">
+        <div class="encabezado-seccion">
+            <h2>Testimonios</h2>
+            <p>Lo que dicen nuestros clientes</p>
+        </div>
+        <div class="cuadrilla-testimonios">
+            <article class="tarjeta-testimonial">
+                <div class="estrellas">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p class="texto-testimonial">Excelente servicio y piezas auténticas. Compré una pintura del siglo XVIII y el proceso de certificación fue impecable.</p>
+                <p class="autor-testimonial">María González</p>
+                <p class="rol-testimonial">Coleccionista</p>
+            </article>
+
+            <article class="tarjeta-testimonial">
+                <div class="estrellas">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p class="texto-testimonial">La mejor casa de anticuarios en Buenos Aires. Personal experto y transparencia total en cada transacción.</p>
+                <p class="autor-testimonial">Carlos Martínez</p>
+                <p class="rol-testimonial">Inversor</p>
+            </article>
+
+            <article class="tarjeta-testimonial">
+                <div class="estrellas">
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                    <span class="estrella">★</span>
+                </div>
+                <p class="texto-testimonial">Me ayudaron a valorar y vender las antigüedades de mi familia. Profesionales, honestos y justos en sus valuaciones.</p>
+                <p class="autor-testimonial">Laura Fernández</p>
+                <p class="rol-testimonial">Heredera</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion-cta-vender">
+        <div class="contenido-cta">
+            <h2>¿Tiene una pieza valiosa para vender?</h2>
+            <p>Obtenga una valuación gratuita de nuestros expertos</p>
+            <a href="/pages/contacto.html" class="boton boton-primario">Solicitar valuación</a>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="columna-pie">
+                <h2 class="logotipo-pie">Pangea Relics</h2>
+                <p class="descripcion-pie">
+                    Compra y venta de antigüedades auténticas.
+                    Piezas certificadas con historia y valor.
+                </p>
+
+                <div class="redes-sociales">
+                    <a href="#" class="enlace-red">Facebook</a>
+                    <a href="#" class="enlace-red">Instagram</a>
+                    <a href="#" class="enlace-red">Twitter</a>
+                </div>
+            </div>
+
+            <div class="columna-pie">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="lista-pie">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/pages/productos.html">Productos</a></li>
+                    <li><a href="/pages/mision-vision.html">Misión & Visión</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="columna-pie">
+                <h3>Contacto</h3>
+                <ul class="lista-contacto">
+                    <li>Av. Libertador 1234</li>
+                    <li>Buenos Aires, Argentina</li>
+                    <li>Tel: +54 11 4567-8900</li>
+                    <li>info@pangearelics.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="fondo-pie">
+            <p>© 2026 Pangea Relics. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/assets/js/index.js"></script>
 </body>
 
 </html>
