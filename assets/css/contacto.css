@@ -2,6 +2,23 @@
     padding: var(--espaciado-3xl) 5%;
     background-color: white;
 }
+.contenido-hero-pagina h1 {
+    color: #d4af37;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.contenido-hero-pagina {
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.contenido-hero-pagina p {
+    color: #d4af37;
+    font-size: 20px;
+    opacity: 0.9;
+}
 
 .contenedor-contacto {
     max-width: 1200px;
@@ -58,16 +75,17 @@
 .enlace-red-grande {
     display: inline-block;
     padding: var(--espaciado-md) var(--espaciado-lg);
-    background-color: var(--color-primario);
-    color: var(--color-oscuro);
+    background-color: white;
+    color: #d4af37;
     text-decoration: none;
     border-radius: var(--radio-borde);
+    border: 2px solid #d4af37;
     font-weight: 600;
     transition: all var(--transicion-normal);
 }
 
 .enlace-red-grande:hover {
-    background-color: var(--color-primario-claro);
+    background-color: #fce28d;;
     transform: translateY(-2px);
 }
 
