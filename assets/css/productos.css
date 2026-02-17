@@ -8,6 +8,66 @@
     justify-content: center;
 }
 
+.seccion-crear-producto {
+    background-color: #f5f5f5;
+    padding: var(--espaciado-2xl) 5%;
+    border-bottom: 2px solid var(--color-primario);
+}
+
+.formulario-crear {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: var(--espaciado-2xl);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.formulario-crear h2 {
+    color: var(--color-oscuro);
+    margin-bottom: var(--espaciado-xl);
+    text-align: center;
+}
+
+.formulario-crear form {
+    display: grid;
+    gap: var(--espaciado-lg);
+}
+
+.formulario-crear input,
+.formulario-crear select {
+    padding: var(--espaciado-md);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.formulario-crear input:focus,
+.formulario-crear select:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.acciones-producto {
+    display: flex;
+    gap: var(--espaciado-md);
+}
+
+.btn-editar {
+    flex: 1;
+}
+
+.btn-eliminar {
+    flex: 1;
+    background-color: #e74c3c;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
 .navegacion{
     margin-top: 35px;
 }

@@ -12,6 +12,7 @@
 
 <body>
     <div id="header"></div>
+    
     <section class="seccion-hero-pagina">
         <div class="contenido-hero-pagina">
             <h1>Nuestro Catálogo</h1>
@@ -19,10 +20,31 @@
         </div>
     </section>
 
+    <section class="seccion-crear-producto">
+        <div class="contenedor-pagina">
+            <div class="formulario-crear">
+                <h2>Agregar Nuevo Producto</h2>
+                <form id="formProducto">
+                    <input type="text" id="inputNombre" placeholder="Nombre del producto" required>
+                    <input type="number" id="inputPrecio" placeholder="Precio" required>
+                    <select id="inputCategoria" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="Pinturas">Pinturas</option>
+                        <option value="Joyas">Joyas</option>
+                        <option value="Esculturas">Esculturas</option>
+                        <option value="Relojes">Relojes</option>
+                        <option value="Porcelanas">Porcelanas</option>
+                        <option value="Libros">Libros</option>
+                    </select>
+                    <button type="submit" class="boton boton-primario">Crear Producto</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <section class="seccion-filtros-productos">
         <div class="contenedor-pagina">
 
-            <!-- COLUMNA 1: FILTROS -->
             <div class="panel-filtros">
                 <h3>Categorías</h3>
                 <div class="grupo-filtro">
@@ -35,12 +57,10 @@
                 </div>
             </div>
 
-            <!-- COLUMNA 2: PRODUCTOS -->
-            <div class="cuadrilla-productos-pagina">
+            <div class="cuadrilla-productos-pagina" id="contenedorProductos">
                 <article class="tarjeta-producto-pagina">
                     <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoPintura1.jpg"
-                            alt="Pintura Renacentista">
+                        <img src="/assets/img/img-Products/ProductoPintura1.jpg" alt="Pintura Renacentista">
                     </div>
                     <div class="informacion-producto-pagina">
                         <span class="categoria-badge">Pinturas</span>
@@ -48,15 +68,15 @@
                         <p class="descripcion-corta">Óleo sobre lienzo del siglo XVI</p>
                         <p class="precio-producto-pagina">$185,000</p>
                         <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
+                            <button class="boton boton-primario btn-editar">Editar</button>
+                            <button class="boton boton-secundario btn-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="tarjeta-producto-pagina">
                     <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoReloj1.jpg"
-                            alt="Reloj de Bolsillo Antiguo">
+                        <img src="/assets/img/img-Products/ProductoReloj1.jpg" alt="Reloj de Bolsillo Antiguo">
                     </div>
                     <div class="informacion-producto-pagina">
                         <span class="categoria-badge">Relojes</span>
@@ -64,15 +84,15 @@
                         <p class="descripcion-corta">Mecanismo suizo del siglo XIX</p>
                         <p class="precio-producto-pagina">$42,500</p>
                         <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
+                            <button class="boton boton-primario btn-editar">Editar</button>
+                            <button class="boton boton-secundario btn-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="tarjeta-producto-pagina">
                     <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoJoya1.jpg"
-                            alt="Collar Victoriano">
+                        <img src="/assets/img/img-Products/ProductoJoya1.jpg" alt="Collar Victoriano">
                     </div>
                     <div class="informacion-producto-pagina">
                         <span class="categoria-badge">Joyas</span>
@@ -80,15 +100,15 @@
                         <p class="descripcion-corta">Oro y diamantes naturales</p>
                         <p class="precio-producto-pagina">$128,000</p>
                         <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
+                            <button class="boton boton-primario btn-editar">Editar</button>
+                            <button class="boton boton-secundario btn-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="tarjeta-producto-pagina">
                     <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoEscultura1.jpg"
-                            alt="Escultura Bronce S.XIX">
+                        <img src="/assets/img/img-Products/ProductoEscultura1.jpg" alt="Escultura Bronce S.XIX">
                     </div>
                     <div class="informacion-producto-pagina">
                         <span class="categoria-badge">Esculturas</span>
@@ -96,15 +116,15 @@
                         <p class="descripcion-corta">Obra maestra francesa del 1800</p>
                         <p class="precio-producto-pagina">$95,000</p>
                         <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
+                            <button class="boton boton-primario btn-editar">Editar</button>
+                            <button class="boton boton-secundario btn-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="tarjeta-producto-pagina">
                     <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoLibro1.jpg"
-                            alt="Libro Raro Primera Edición">
+                        <img src="/assets/img/img-Products/ProductoLibro1.jpg" alt="Libro Raro Primera Edición">
                     </div>
                     <div class="informacion-producto-pagina">
                         <span class="categoria-badge">Libros</span>
@@ -112,15 +132,15 @@
                         <p class="descripcion-corta">Primera edición de 1887</p>
                         <p class="precio-producto-pagina">$38,000</p>
                         <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
+                            <button class="boton boton-primario btn-editar">Editar</button>
+                            <button class="boton boton-secundario btn-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </article>
 
                 <article class="tarjeta-producto-pagina">
                     <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoPorcelana1.jpg"
-                            alt="Porcelana China Ming">
+                        <img src="/assets/img/img-Products/ProductoPorcelana1.jpg" alt="Porcelana China Ming">
                     </div>
                     <div class="informacion-producto-pagina">
                         <span class="categoria-badge">Porcelanas</span>
@@ -128,11 +148,11 @@
                         <p class="descripcion-corta">Porcelana azul y blanca dinastía Ming</p>
                         <p class="precio-producto-pagina">$156,000</p>
                         <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
+                            <button class="boton boton-primario btn-editar">Editar</button>
+                            <button class="boton boton-secundario btn-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </article>
-
             </div>
 
         </div>
@@ -140,6 +160,7 @@
 
     <div id="footer"></div>
     <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/crud-productos.js"></script>
 </body>
 
 </html>
