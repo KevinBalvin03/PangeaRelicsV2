@@ -78,6 +78,8 @@ body {
     color: var(--color-primario);
     font-size: 1.5rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
 }
 
 .logotipo h1 {
@@ -106,23 +108,9 @@ body {
     position: relative;
 }
 
-.enlace-nav::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-primario);
-    transition: width var(--transicion-normal);
-}
-
-.enlace-nav:hover {
-    color: var(--color-primario);
-}
-
-.enlace-nav:hover::after {
-    width: 100%;
+.img-header{
+    width: 140px;
+    
 }
 
 .boton-menu {
@@ -139,6 +127,15 @@ body {
     height: 3px;
     background-color: var(--color-primario);
     transition: var(--transicion-normal);
+}
+
+.boton-autentificacion {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .pie-pagina {

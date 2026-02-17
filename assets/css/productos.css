@@ -1,5 +1,4 @@
 .seccion-hero-pagina {
-    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(45, 45, 45, 0.9) 100%);
     color: white;
     padding: var(--espaciado-4xl) 5%;
     text-align: center;
