@@ -9,6 +9,10 @@
     justify-content: center;
 }
 
+.navegacion{
+    margin-top: 35px;
+}
+
 body{
     margin: 0;
     padding: 0;
