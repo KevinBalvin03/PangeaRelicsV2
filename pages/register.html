@@ -25,31 +25,31 @@
                 <form class="formulario-auth">
                     <div class="grupo-input">
                         <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" placeholder="Juan Pérez">
+                        <input type="text" id="nombre" placeholder="Juan Pérez" required>
                     </div>
 
                     <div class="grupo-input">
                         <label for="correo">Correo Electrónico</label>
-                        <input type="email" id="correo" placeholder="tu@email.com">
+                        <input type="email" id="correo" placeholder="tu@email.com" required>
                     </div>
 
                     <div class="grupo-input">
                         <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" placeholder="+54 11 xxxxxxxx">
+                        <input type="tel" id="telefono" placeholder="+54 11 xxxxxxxx" required>
                     </div>
 
                     <div class="grupo-input">
                         <label for="contrasena">Contraseña</label>
-                        <input type="password" id="contrasena" placeholder="••••••••">
+                        <input type="password" id="contrasena" placeholder="••••••••" required>
                     </div>
 
                     <div class="grupo-input">
                         <label for="confirma">Confirmar Contraseña</label>
-                        <input type="password" id="confirma" placeholder="••••••••">
+                        <input type="password" id="confirma" placeholder="••••••••" required>
                     </div>
 
                     <label class="checkbox-auth">
-                        <input type="checkbox">
+                        <input type="checkbox" id="terminos" required>
                         Acepto los términos y condiciones
                     </label>
 
@@ -75,6 +75,7 @@
     </section>
 
     <div id="footer"></div>
+    
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/registro.js"></script>
 </body>

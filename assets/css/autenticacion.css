@@ -105,6 +105,51 @@
     border-top: 1px solid var(--color-gris-borde);
 }
 
+.boton-login {
+    background-color: var(--color-oscuro);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    border-radius: 10px;
+    flex: 1;
+    padding: var(--espaciado-sm) var(--espaciado-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all var(--transicion-normal);
+}
+
+.boton-login:hover {
+    background-color: var(--color-primario);
+    color: var(--color-oscuro);
+    transform: translateY(-2px);
+}
+.acciones-producto {
+    display: flex;
+    gap: var(--espaciado-md);
+}
+
+.boton {
+    flex: 1;
+    padding: var(--espaciado-sm) var(--espaciado-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-oscuro);
+    color: var(--color-primario);     
+    border-radius: var(--radio-borde);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--transicion-normal);
+}
+
+.boton:hover {
+    background-color: var(--color-primario);
+    color: var(--color-oscuro);       
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
 .pie-auth p {
     color: #333;
     font-size: 0.9rem;
