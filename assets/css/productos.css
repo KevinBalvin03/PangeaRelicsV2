@@ -228,21 +228,22 @@ a{
     font-size: 0.9rem;
 }
 
-.boton-favorito {
-    width: 45px;
-    height: 45px;
-    padding: 0;
-    border: 2px solid var(--color-gris-borde);
-    background-color: white;
-    border-radius: var(--radio-borde);
-    cursor: pointer;
-    font-size: 1.2rem;
+.boton {
+    background-color: var(--color-oscuro);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    border-radius: 10px;
+    flex: 1;
+    padding: var(--espaciado-sm) var(--espaciado-md);
+    font-size: 0.9rem;
+    font-weight: 600;
     transition: all var(--transicion-normal);
 }
 
-.boton-favorito:hover {
-    border-color: var(--color-primario);
-    color: var(--color-primario);
+.boton:hover {
+    background-color: var(--color-primario);
+    color: var(--color-oscuro);
+    transform: translateY(-2px);
 }
 
 .paginacion {
@@ -332,6 +333,60 @@ a{
     }
 }
 
+.panel-filtros {
+    background-color: var(--color-oscuro);
+    padding: var(--espaciado-xl);
+    border-radius: var(--radio-borde);
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+    box-shadow: var(--sombra-media);
+    border: 1px solid var(--color-oscuro-medio);
+}
+
+.panel-filtros h3 {
+    color: var(--color-primario);
+    font-size: 1.4rem;
+    margin-bottom: var(--espaciado-xl);
+    border-bottom: 1px solid var(--color-oscuro-medio);
+    padding-bottom: var(--espaciado-sm);
+}
+
+.grupo-filtro li {
+    list-style: none;
+    margin-bottom: var(--espaciado-lg);
+}
+
+.grupo-filtro li a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative; 
+    transition: color var(--transicion-normal);
+    display: inline-block;
+}
+
+.grupo-filtro li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-primario);
+    transition: width var(--transicion-normal);
+    box-shadow: 0 0 8px var(--color-primario-claro);
+}
+
+.grupo-filtro li a:hover {
+    color: var(--color-primario-claro);
+}
+
+.grupo-filtro li a:hover::after {
+    width: 100%;
+}
+
 @media (max-width: 480px) {
     .seccion-filtros-productos {
         padding: var(--espaciado-2xl) 5%;
@@ -354,3 +409,4 @@ a{
         padding-bottom: var(--espaciado-lg);
     }
 }
+

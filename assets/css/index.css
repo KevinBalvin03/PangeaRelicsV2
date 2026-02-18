@@ -188,13 +188,26 @@
     color: var(--color-texto-claro);
 }
 
+.seccion-categorias {
+    padding: var(--espaciado-3xl) 0; 
+    background-color: #262626;
+    overflow: hidden;
+}
+
 .cuadrilla-categorias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
     gap: var(--espaciado-2xl);
+    width: max-content; 
+    padding: var(--espaciado-lg);
+    animation: carruselInfinito 30s linear infinite;
+}
+
+.seccion-categorias:hover .cuadrilla-categorias {
+    animation-play-state: paused;
 }
 
 .tarjeta-categoria {
+    flex: 0 0 250px;
     background: white;
     border: 2px solid var(--color-gris-borde);
     border-radius: var(--radio-borde);
@@ -202,8 +215,27 @@
     text-align: center;
     text-decoration: none;
     color: inherit;
-    transition: all var(--transicion-normal);
+    transition: transform var(--transicion-normal), 
+                box-shadow var(--transicion-normal), 
+                border-color var(--transicion-normal);
     cursor: pointer;
+}
+
+.tarjeta-categoria:hover {
+    border-color: var(--color-primario);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+    background-color: #ffffff;
+    transform: scale(1.08) translateY(-10px);
+    z-index: 10; 
+}
+
+@keyframes carruselInfinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .tarjeta-categoria:hover {
@@ -268,6 +300,34 @@
 .seccion-testimonios {
     padding: var(--espaciado-3xl) 5%;
     background-color: var(--color-gris-claro);
+}
+
+.perfil-autor {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-md);
+    margin-top: var(--espaciado-lg);
+}
+
+.foto-usuario {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radio-borde-circular);
+    object-fit: cover;
+    border: 2px solid var(--color-primario); 
+}
+
+.datos-autor {
+    display: flex;
+    flex-direction: column;
+}
+
+.autor-testimonial {
+    margin-bottom: 0 !important;
+}
+
+.rol-testimonial {
+    margin-top: 2px;
 }
 
 .cuadrilla-testimonios {

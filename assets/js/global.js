@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     cargarComponente("header", "/components/header.html");
     cargarComponente("footer", "/components/footer.html");
-
 });
 
 function cargarComponente(id, ruta) {
@@ -15,6 +13,38 @@ function cargarComponente(id, ruta) {
         })
         .then(data => {
             document.getElementById(id).innerHTML = data;
+            if (id === "header") {
+                gestionarSesionEnHeader();
+            }
         })
         .catch(error => console.error(error));
+}
+
+function gestionarSesionEnHeader() {
+    const authContainer = document.getElementById('auth-container');
+    if (!authContainer) return;
+
+    const usuarioSesion = JSON.parse(localStorage.getItem('usuarioSesion'));
+
+    if (usuarioSesion) {
+        authContainer.innerHTML = `
+            <li class="enlace-nav nombre-usuario-saludo">
+                Hola, ${usuarioSesion.nombre}
+            </li>
+            <li>
+                <a href="#" id="cerrar-sesion" class="enlace-nav boton-logout">
+                    Cerrar Sesión
+                </a>
+            </li>
+        `;
+
+        document.getElementById('cerrar-sesion').addEventListener('click', (e) => {
+            e.preventDefault();
+
+            localStorage.removeItem('usuarioSesion');
+
+            alert("Has cerrado sesión.");
+            window.location.href = "/";
+        });
+    }
 }
