@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function cargarComponente(id, ruta) {
     fetch(ruta)
         .then(response => {
-            if (!response.ok) {
-                throw new Error("Error cargando " + ruta);
-            }
+            if (!response.ok) throw new Error("Error cargando " + ruta);
             return response.text();
         })
         .then(data => {
@@ -26,7 +24,7 @@ function gestionarSesionEnHeader() {
 
     const usuarioSesion = JSON.parse(localStorage.getItem('usuarioSesion'));
 
-    if (usuarioSesion) {
+    if (usuarioSesion) 
         authContainer.innerHTML = `
             <li class="enlace-nav nombre-usuario-saludo">
                 Hola, ${usuarioSesion.nombre}
@@ -40,11 +38,7 @@ function gestionarSesionEnHeader() {
 
         document.getElementById('cerrar-sesion').addEventListener('click', (e) => {
             e.preventDefault();
-
             localStorage.removeItem('usuarioSesion');
-
-            alert("Has cerrado sesión.");
-            window.location.href = "/";
+            window.location.href = "/index.html"; 
         });
-    }
 }

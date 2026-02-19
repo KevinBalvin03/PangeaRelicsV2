@@ -1,209 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Administración - Pangea Relics</title>
-    <link rel="icon" href="/assets/img/LogoCircular.png">
+    <title>Panel de Control - Pangea Relics</title>
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/admin.css">
 </head>
+<body class="admin-body">
+    <div id="header"></div>
 
-<body>
-    <div class="contenedor-admin">
-        <aside class="barra-lateral-admin">
-            <div class="logo-admin">
-                <h2>Pangea Relics</h2>
-                <p>Admin</p>
-            </div>
-
-            <nav class="menu-admin">
-                <a href="#" class="item-menu activo" data-seccion="dashboard">Dashboard</a>
-                <a href="#" class="item-menu" data-seccion="usuarios">Usuarios</a>
-                <a href="#" class="item-menu" data-seccion="productos">Productos</a>
-                <a href="#" class="item-menu" data-seccion="ordenes">Órdenes</a>
-                <a href="#" class="item-menu" data-seccion="reportes">Reportes</a>
-                <a href="#" class="item-menu" data-seccion="configuracion">Configuración</a>
-            </nav>
-
-            <div class="pie-sidebar">
-                <button class="boton-cerrar-sesion">Cerrar Sesión</button>
-            </div>
-        </aside>
-
-        <main class="contenido-admin">
-            <header class="encabezado-admin">
-                <div class="titulo-pagina">
-                    <h1 id="tituloPagina">Dashboard</h1>
-                </div>
-
-                <div class="info-usuario-admin">
-                    <span id="nombreUsuarioAdmin">Usuario</span>
-                    <button class="boton-perfil">⚙️ Perfil</button>
-                </div>
-            </header>
-
-            <section class="seccion-contenido">
-                <div id="dashboard" class="contenido-seccion activo">
-                    <div class="cuadrilla-estadisticas">
-                        <div class="tarjeta-estadistica">
-                            <div class="numero-estadistica">1,234</div>
-                            <div class="label-estadistica">Usuarios Totales</div>
-                        </div>
-                        <div class="tarjeta-estadistica">
-                            <div class="numero-estadistica">5,678</div>
-                            <div class="label-estadistica">Productos</div>
-                        </div>
-                        <div class="tarjeta-estadistica">
-                            <div class="numero-estadistica">$245,890</div>
-                            <div class="label-estadistica">Ventas Totales</div>
-                        </div>
-                        <div class="tarjeta-estadistica">
-                            <div class="numero-estadistica">892</div>
-                            <div class="label-estadistica">Órdenes</div>
-                        </div>
-                    </div>
-
-                    <div class="graficos-dashboard">
-                        <div class="grafico">
-                            <h3>Ventas por Mes</h3>
-                            <p style="color: var(--color-gris-oscuro); padding: var(--espaciado-lg);">Gráfico de ventas mensuales</p>
-                        </div>
-                        <div class="grafico">
-                            <h3>Categorías Populares</h3>
-                            <p style="color: var(--color-gris-oscuro); padding: var(--espaciado-lg);">Distribución por categoría</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="usuarios" class="contenido-seccion">
-                    <div class="encabezado-seccion-admin">
-                        <h2>Gestión de Usuarios</h2>
-                        <button class="boton boton-primario">Agregar Usuario</button>
-                    </div>
-
-                    <table class="tabla-admin">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Correo</th>
-                                <th>Teléfono</th>
-                                <th>Fecha Registro</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>001</td>
-                                <td>Juan Pérez</td>
-                                <td>juan@email.com</td>
-                                <td>+54 11 1234567</td>
-                                <td>15/02/2026</td>
-                                <td><button class="boton-accion">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>002</td>
-                                <td>María García</td>
-                                <td>maria@email.com</td>
-                                <td>+54 11 9876543</td>
-                                <td>14/02/2026</td>
-                                <td><button class="boton-accion">Editar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div id="productos" class="contenido-seccion">
-                    <div class="encabezado-seccion-admin">
-                        <h2>Gestión de Productos</h2>
-                        <button class="boton boton-primario">Nuevo Producto</button>
-                    </div>
-
-                    <table class="tabla-admin">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Categoría</th>
-                                <th>Precio</th>
-                                <th>Stock</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>P001</td>
-                                <td>Pintura Renacentista</td>
-                                <td>Pinturas</td>
-                                <td>$185,000</td>
-                                <td>1</td>
-                                <td><button class="boton-accion">Editar</button></td>
-                            </tr>
-                            <tr>
-                                <td>P002</td>
-                                <td>Reloj de Bolsillo</td>
-                                <td>Relojes</td>
-                                <td>$42,500</td>
-                                <td>3</td>
-                                <td><button class="boton-accion">Editar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div id="ordenes" class="contenido-seccion">
-                    <h2>Órdenes Recientes</h2>
-                    <table class="tabla-admin">
-                        <thead>
-                            <tr>
-                                <th>Número</th>
-                                <th>Cliente</th>
-                                <th>Monto</th>
-                                <th>Estado</th>
-                                <th>Fecha</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ORD-001</td>
-                                <td>Juan Pérez</td>
-                                <td>$185,000</td>
-                                <td><span class="badge-exito">Completada</span></td>
-                                <td>15/02/2026</td>
-                            </tr>
-                            <tr>
-                                <td>ORD-002</td>
-                                <td>María García</td>
-                                <td>$42,500</td>
-                                <td><span class="badge-pendiente">Pendiente</span></td>
-                                <td>14/02/2026</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div id="reportes" class="contenido-seccion">
-                    <h2>Reportes</h2>
-                    <p style="color: var(--color-gris-oscuro); padding: var(--espaciado-lg);">Sección de reportes y análisis</p>
-                </div>
-
-                <div id="configuracion" class="contenido-seccion">
-                    <h2>Configuración</h2>
-                    <div class="grupo-configuracion">
-                        <label>Nombre de la Empresa</label>
-                        <input type="text" value="Pangea Relics">
-                    </div>
-                    <div class="grupo-configuracion">
-                        <label>Email de Contacto</label>
-                        <input type="email" value="info@pangearelics.com">
-                    </div>
-                    <button class="boton boton-primario">Guardar Cambios</button>
-                </div>
-            </section>
-        </main>
+<div id="bloqueo-admin" class="overlay-seguridad">
+    <div class="tarjeta-seguridad">
+        <div class="icono-cerradura">🔒</div>
+        <h2>Acceso Restringido</h2>
+        <p>Ingrese el código de seguridad de Pangea Relics</p>
+        <input type="password" id="codigo-acceso" placeholder="••••" maxlength="4">
+        <button onclick="verificarCodigo()" class="boton-acceso">Desbloquear</button>
+        <p id="error-acceso" class="mensaje-error">Código incorrecto. Intente de nuevo.</p>
     </div>
-</body>
+</div>
 
+<main id="admin-main-content" style="display: none;">
+    </main>
+    <script src="/assets/js/admin.js"></script>
+</body>
 </html>

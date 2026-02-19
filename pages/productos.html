@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/productos.css">
 </head>
-
 <body>
     <div id="header"></div>
     <section class="seccion-hero-pagina">
@@ -21,124 +19,21 @@
 
     <section class="seccion-filtros-productos">
         <div class="contenedor-pagina">
-
             <div class="panel-filtros">
                 <h3>Categorías</h3>
                 <div class="grupo-filtro">
-                    <li><a href="#">Pinturas</a></li>
-                    <li><a href="#">Joyas</a></li>
-                    <li><a href="#">Esculturas</a></li>
-                    <li><a href="#">Relojes</a></li>
-                    <li><a href="#">Porcelanas</a></li>
-                    <li><a href="#">Libros</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Todas">Todas</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Pinturas">Pinturas</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Joyas">Joyas</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Esculturas">Esculturas</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Relojes">Relojes</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Porcelanas">Porcelanas</a></li>
+                    <li><a href="#" class="filtro-link" data-categoria="Libros">Libros</a></li>
                 </div>
             </div>
 
-            <div class="cuadrilla-productos-pagina">
-                <article class="tarjeta-producto-pagina">
-                    <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoPintura1.jpg"
-                            alt="Pintura Renacentista">
-                    </div>
-                    <div class="informacion-producto-pagina">
-                        <span class="categoria-badge">Pinturas</span>
-                        <h3>Pintura Renacentista</h3>
-                        <p class="descripcion-corta">Óleo sobre lienzo del siglo XVI</p>
-                        <p class="precio-producto-pagina">$185,000</p>
-                        <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
-                            <button class="boton boton-compra" onclick="intentarCompra()">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto-pagina">
-                    <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoReloj1.jpg"
-                            alt="Reloj de Bolsillo Antiguo">
-                    </div>
-                    <div class="informacion-producto-pagina">
-                        <span class="categoria-badge">Relojes</span>
-                        <h3>Reloj de Bolsillo Antiguo</h3>
-                        <p class="descripcion-corta">Mecanismo suizo del siglo XIX</p>
-                        <p class="precio-producto-pagina">$42,500</p>
-                        <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
-                            <button class="boton boton-compra" onclick="intentarCompra()">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto-pagina">
-                    <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoJoya1.jpg"
-                            alt="Collar Victoriano">
-                    </div>
-                    <div class="informacion-producto-pagina">
-                        <span class="categoria-badge">Joyas</span>
-                        <h3>Collar Victoriano</h3>
-                        <p class="descripcion-corta">Oro y diamantes naturales</p>
-                        <p class="precio-producto-pagina">$128,000</p>
-                        <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
-                            <button class="boton boton-compra" onclick="intentarCompra()">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto-pagina">
-                    <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoEscultura1.jpg"
-                            alt="Escultura Bronce S.XIX">
-                    </div>
-                    <div class="informacion-producto-pagina">
-                        <span class="categoria-badge">Esculturas</span>
-                        <h3>Escultura Bronce S.XIX</h3>
-                        <p class="descripcion-corta">Obra maestra francesa del 1800</p>
-                        <p class="precio-producto-pagina">$95,000</p>
-                        <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
-                            <button class="boton boton-compra" onclick="intentarCompra()">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto-pagina">
-                    <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoLibro1.jpg"
-                            alt="Libro Raro Primera Edición">
-                    </div>
-                    <div class="informacion-producto-pagina">
-                        <span class="categoria-badge">Libros</span>
-                        <h3>Libro Raro Primera Edición</h3>
-                        <p class="descripcion-corta">Primera edición de 1887</p>
-                        <p class="precio-producto-pagina">$38,000</p>
-                        <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
-                            <button class="boton boton-compra" onclick="intentarCompra()">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="tarjeta-producto-pagina">
-                    <div class="imagen-producto-pagina">
-                        <img src="/assets/img/img-Products/ProductoPorcelana1.jpg"
-                            alt="Porcelana China Ming">
-                    </div>
-                    <div class="informacion-producto-pagina">
-                        <span class="categoria-badge">Porcelanas</span>
-                        <h3>Porcelana China Ming</h3>
-                        <p class="descripcion-corta">Porcelana azul y blanca dinastía Ming</p>
-                        <p class="precio-producto-pagina">$156,000</p>
-                        <div class="acciones-producto">
-                            <button class="boton boton-primario">Ver detalle</button>
-                            <button class="boton boton-compra" onclick="intentarCompra()">Comprar</button>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-
+            <div class="cuadrilla-productos-pagina" id="contenedor-productos">
+                </div>
         </div>
     </section>
 
@@ -146,5 +41,4 @@
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/productos.js"></script>
 </body>
-
 </html>
