@@ -151,69 +151,75 @@ Para personalizar los colores, edita las variables en `global.css`:
 - Las imágenes de productos provienen de URL externas (Supabase)
 - El formulario de contacto es un prototipo (requiere backend para enviarse)
 
-## Autor
-Proyecto creado para Pangea Relics - 2026
 ---
----R
+---
+---
 
-# 🛠️ Documentación: Sistema de Autenticación y Persistencia
+# 🏛️ Documentación Técnica de JavaScript: Pangea Relics
 
-Esta sección describe la lógica de JavaScript implementada para la gestión de usuarios, sesiones y persistencia de datos en el proyecto **Pangea Relics**.
-
-## 🗄️ Arquitectura del Almacenamiento (The Store)
-
-El sistema utiliza la **Web Storage API (LocalStorage)** para emular una base de datos en el cliente. Se gestionan dos estructuras principales:
-
-1.  **`usuarios` (Database Store):** Un `Array` de objetos que almacena la información de todas las cuentas registradas. Permite la persistencia de múltiples usuarios simultáneamente.
-2.  **`usuarioSesion` (Session Store):** Un `Object` que actúa como indicador de sesión activa. Su existencia determina si el usuario tiene acceso a funcionalidades extendidas (como compras).
-
-
+Este documento detalla la arquitectura lógica y el flujo de datos del sitio web **Pangea Relics**. El sistema utiliza una arquitectura híbrida de almacenamiento para gestionar la persistencia de datos globales y la seguridad de las sesiones individuales.
 
 ---
 
-## 🚀 Lógica de los Módulos JS
+## 🏗️ Arquitectura de Scripts
 
-### 1. Registro de Usuarios (`registro.js`)
-El proceso de registro sigue un flujo de validación y almacenamiento seguro:
+### 1. `global.js` (Núcleo y Sesión)
+Controla la estructura común del sitio y la persistencia de la sesión del usuario.
+* **Componentes Dinámicos**: Carga el `header` y el `footer` mediante `fetch` desde la carpeta `/components/`.
+* **Identidad Visual**: Verifica la sesión activa para inyectar el nombre del usuario y el botón de logout en el menú de navegación.
 
-* **Captura de Datos:** Obtiene los valores de los inputs y aplica `.trim()` para limpiar espacios en blanco innecesarios.
-* **Validación de Duplicados:** Antes de insertar un nuevo objeto, el script utiliza el método `.find()` sobre el arreglo de usuarios para verificar si el correo electrónico ya existe.
-* **Serialización:** Dado que `localStorage` solo admite strings, se utiliza `JSON.stringify()` para convertir el objeto de usuario antes de guardarlo.
+### 2. `productos.js` (Motor del Catálogo y Admin)
+Es el archivo central que gestiona el inventario de piezas históricas.
+* **Inventario (Seed)**: Define un array inicial de productos que se guarda en el navegador la primera vez que se visita el sitio.
+* **Herramientas Administrativas**: Si el usuario es `admin`, el script habilita botones de **Editar** y **Eliminar** en cada tarjeta, además de inyectar la **Tarjeta de Creación** al final del catálogo.
+* **Catalogación Profesional**: Utiliza un formulario modal dinámico que incluye:
+    * **Validación Nativa**: Campos obligatorios y restricción de solo números en precios.
+    * **Botón de Carga Personalizado**: Un diseño elegante que reemplaza al input de archivos nativo.
+    * **Procesamiento de Imágenes**: Utiliza `FileReader` para convertir fotos locales en formato **Base64**, permitiendo que las nuevas piezas guarden su imagen directamente en el navegador.
 
-### 2. Control de Sesión Global (`global.js`)
-Este es el núcleo del sistema y se encarga de la reactividad de la interfaz:
+### 3. `admin.js` (Seguridad de Acceso)
+Filtro de entrada para las funciones de gestión.
+* **Validación**: Compara la clave ingresada (Código: `1234`).
+* **Elevación de Privilegios**: Al ingresar correctamente, establece la sesión administrativa en el almacenamiento volátil (`sessionStorage`).
 
-* **Carga Asíncrona:** Utiliza `fetch()` para cargar componentes reutilizables (Header/Footer).
-* **Gestión de Estado Dinámico:** Al cargar el Header, el script verifica la presencia de `usuarioSesion`.
-    * **Si existe:** Modifica el DOM para ocultar los botones de *Login/Register*, inyecta un saludo personalizado y activa la funcionalidad de *Logout*.
-    * **Si no existe:** Mantiene los botones de acceso por defecto.
-* **Cierre de Sesión:** El método `removeItem('usuarioSesion')` destruye el objeto de sesión y recarga la página para restaurar el estado anónimo.
+### 4. `index.js` (Gestión de Inicio)
+* **Sección Destacados**: Consulta el inventario, lo invierte cronológicamente y renderiza las 3 piezas más recientes para dar dinamismo a la página principal.
 
-
-
-### 3. Middleware de Compra (`productos.js`)
-Actúa como una barrera de seguridad en la experiencia de usuario:
-
-* **Intercepción:** La función `intentarCompra()` evalúa el estado de la sesión en tiempo real.
-* **Redirección Condicional:** Si el usuario no está autenticado, el sistema bloquea la acción, lanza una alerta y redirige automáticamente a `login.html`.
-
----
-
-## 🛠️ Métodos y Funciones Clave
-
-| Función / Método | Descripción |
-| :--- | :--- |
-| `JSON.parse()` | Transforma las cadenas del Storage en objetos/arreglos de JS. |
-| `JSON.stringify()` | Convierte estructuras de JS en cadenas para su almacenamiento. |
-| `.find()` | Algoritmo de búsqueda utilizado para autenticar credenciales y evitar duplicados. |
-| `fetch()` | Método asíncrono para la inyección dinámica de componentes HTML. |
-| `Date.now()` | Utilizado para generar IDs únicos para cada objeto de usuario. |
+### 5. `login.js` & `registro.js` (Gestión de Usuarios)
+Controlan el acceso y la base de datos de clientes.
+* **Registro**: Crea perfiles de usuario validando que el correo no esté duplicado. Al finalizar con éxito, inicia la sesión automáticamente.
+* **Login**: Valida las credenciales contra la base de datos local. Si son correctas, establece la identidad del usuario en la sesión activa.
 
 ---
 
-## 🧪 Cómo Verificar el Store
-Para auditar el funcionamiento del sistema desde el navegador:
-1. Abrir herramientas de desarrollador (`F12`).
-2. Ir a la pestaña **Application** (Aplicación).
-3. Seleccionar **Local Storage** en el menú lateral.
-4. Observar las llaves `usuarios` y `usuarioSesion` mientras se interactúa con el flujo de registro y login.
+## 🔐 Gestión de Almacenamiento e Identidad
+
+El sistema utiliza una arquitectura de almacenamiento diferenciada para optimizar la seguridad y la persistencia:
+
+| Recurso | Tipo de Almacenamiento | Persistencia |
+| :--- | :--- | :--- |
+| **Catálogo de Productos** | `localStorage` | Permanente (Datos Globales) |
+| **Usuarios Registrados** | `localStorage` | Permanente (Datos Globales) |
+| **Sesión de Usuario** | `sessionStorage` | **Volátil** (Solo pestaña actual) |
+
+### 🔐 Notas sobre la Sesión Volátil
+* **Aislamiento de Sesión (Session Isolation)**: El uso de `sessionStorage` permite que los datos de acceso sean exclusivos de la pestaña actual.
+* **Beneficio Multicuenta**: Permite probar múltiples roles (Admin y Cliente) simultáneamente en diferentes pestañas sin interferencias.
+* **Seguridad de Cierre**: La sesión se destruye automáticamente al cerrar la pestaña o la ventana del navegador, evitando que el acceso administrativo quede abierto por descuido.
+
+---
+
+## 🛠️ Guía de Mantenimiento para el Equipo
+
+### Cómo agregar una pieza nueva (Flujo Admin)
+1. Iniciar sesión como administrador (Código: `1234`).
+2. Ir al final del catálogo y hacer clic en la tarjeta `+`.
+3. Completar el formulario modal. El botón de fotografía abrirá el explorador de archivos local.
+4. Al confirmar, la pieza se integrará automáticamente al archivo histórico de la tienda con su imagen procesada.
+
+### Reset Completo del Sistema
+Para restaurar el sitio a su estado original (borrar productos creados y usuarios registrados), ejecute este comando en la consola del navegador (`F12`):
+```javascript
+localStorage.clear();
+sessionStorage.clear();
+location.reload();

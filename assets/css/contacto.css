@@ -1,12 +1,12 @@
 .seccion-contacto {
     padding: var(--espaciado-3xl) 5%;
-    background-color: white;
+    background-color: #121417;
+    color: white;
 }
-.contenido-hero-pagina h1 {
-    color: #d4af37;
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 15px;
+
+.seccion-horarios {
+    padding: var(--espaciado-3xl) 5%;
+    background-color: #0b0d0f;
 }
 
 .contenido-hero-pagina {
@@ -14,10 +14,44 @@
     padding: 80px 20px 40px 20px;
 }
 
+.contenido-hero-pagina h1 {
+    color: var(--color-primario);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
 .contenido-hero-pagina p {
-    color: #d4af37;
+    color: var(--color-primario);
     font-size: 20px;
     opacity: 0.9;
+}
+
+.boton-primario, 
+.enlace-red-grande {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: var(--color-primario);
+    text-decoration: none !important;
+    border: 2px solid var(--color-primario);
+    border-radius: var(--radio-borde);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all var(--transicion-normal);
+    cursor: pointer;
+    text-align: center;
+}
+
+.boton-primario:hover, 
+.enlace-red-grande:hover {
+    background-color: var(--color-primario) !important;
+    color: #121417 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    text-decoration: none !important;
 }
 
 .contenedor-contacto {
@@ -36,7 +70,7 @@
 .info-contacto h2 {
     font-size: 2rem;
     margin-bottom: var(--espaciado-2xl);
-    color: var(--color-oscuro);
+    color: var(--color-primario);
 }
 
 .bloque-contacto {
@@ -50,9 +84,8 @@
 }
 
 .bloque-contacto p {
-    color: var(--color-gris-oscuro);
+    color: var(--color-texto-gris);
     line-height: 1.8;
-    margin-bottom: var(--espaciado-sm);
 }
 
 .bloque-contacto a {
@@ -64,6 +97,23 @@
 
 .bloque-contacto a:hover {
     color: var(--color-primario-claro);
+    text-decoration: none;
+}
+
+.enlace-whatsapp {
+    display: block;
+    text-align: center;
+    margin: var(--espaciado-xl) auto;
+    color: var(--color-primario) !important;
+    font-weight: 700;
+    text-decoration: none !important;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.enlace-whatsapp:hover {
+    opacity: 0.8;
+    text-decoration: none !important;
 }
 
 .redes-sociales-contacto {
@@ -72,36 +122,20 @@
     flex-wrap: wrap;
 }
 
-.enlace-red-grande {
-    display: inline-block;
-    padding: var(--espaciado-md) var(--espaciado-lg);
-    background-color: white;
-    color: #d4af37;
-    text-decoration: none;
-    border-radius: var(--radio-borde);
-    border: 2px solid #d4af37;
-    font-weight: 600;
-    transition: all var(--transicion-normal);
-}
-
-.enlace-red-grande:hover {
-    background-color: #fce28d;;
-    transform: translateY(-2px);
-}
-
 .formulario-contacto {
-    background-color: var(--color-gris-claro);
+    background-color: #1e2125; 
     padding: var(--espaciado-2xl);
     border-radius: var(--radio-borde);
     display: flex;
     flex-direction: column;
     gap: var(--espaciado-lg);
+    box-shadow: var(--sombra-pesada);
 }
 
 .formulario-contacto h2 {
     font-size: 1.8rem;
+    color: var(--color-primario);
     margin-bottom: var(--espaciado-lg);
-    color: var(--color-oscuro);
 }
 
 .grupo-formulario {
@@ -112,7 +146,7 @@
 
 .grupo-formulario label {
     font-weight: 600;
-    color: var(--color-oscuro);
+    color: white;
     font-size: 0.95rem;
 }
 
@@ -120,12 +154,11 @@
 .grupo-formulario textarea,
 .grupo-formulario select {
     padding: var(--espaciado-md);
-    border: 1px solid var(--color-gris-borde);
+    background-color: #121417;
+    border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: var(--radio-borde);
-    font-family: var(--fuente-principal);
+    color: white;
     font-size: 0.95rem;
-    color: var(--color-oscuro);
-    transition: border-color var(--transicion-normal);
 }
 
 .grupo-formulario input:focus,
@@ -145,7 +178,7 @@
     display: flex;
     align-items: center;
     font-weight: 400;
-    color: var(--color-gris-oscuro);
+    color: var(--color-texto-gris);
     cursor: pointer;
 }
 
@@ -155,43 +188,36 @@
     cursor: pointer;
 }
 
-.formulario-contacto .boton {
+.formulario-contacto .boton-primario {
     align-self: flex-start;
-    padding: var(--espaciado-md) var(--espaciado-2xl);
-    font-size: 1rem;
-}
-
-.seccion-horarios {
-    padding: var(--espaciado-3xl) 5%;
-    background-color: var(--color-gris-claro);
 }
 
 .contenedor-horarios {
     max-width: 600px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .contenedor-horarios h2 {
     font-size: 2rem;
     margin-bottom: var(--espaciado-2xl);
-    color: var(--color-oscuro);
+    color: var(--color-primario);
+    text-align: center;
 }
 
 .tabla-horarios {
-    background-color: white;
+    background-color: #1e2125;
     border-radius: var(--radio-borde);
     overflow: hidden;
     box-shadow: var(--sombra-ligera);
+    border: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .fila-horarios {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: var(--espaciado-xl);
-    padding: var(--espaciado-lg) var(--espaciado-xl);
-    border-bottom: 1px solid var(--color-gris-borde);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: var(--espaciado-lg) var(--espaciado-xl);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .fila-horarios:last-child {
@@ -200,15 +226,21 @@
 
 .dia {
     font-weight: 600;
-    color: var(--color-oscuro);
-    text-align: left;
+    color: var(--color-primario);
+    flex-shrink: 0;
+}
+
+.horas-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
 }
 
 .hora {
-    color: var(--color-gris-oscuro);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+    color: var(--color-texto-gris);
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -227,32 +259,25 @@
         font-size: 1.5rem;
     }
 
-    .formulario-contacto {
-        padding: var(--espaciado-xl);
-    }
-
     .redes-sociales-contacto {
         flex-direction: column;
     }
 
     .enlace-red-grande {
         width: 100%;
-        text-align: center;
     }
-}
 
-@media (max-width: 480px) {
     .fila-horarios {
-        grid-template-columns: 1fr;
-        gap: var(--espaciado-md);
-        padding: var(--espaciado-md) var(--espaciado-lg);
+        flex-direction: column;
+        text-align: center;
+        gap: var(--espaciado-sm);
     }
 
-    .dia {
-        font-size: 0.9rem;
+    .horas-contenedor {
+        align-items: center;
     }
 
-    .hora {
-        font-size: 0.9rem;
+    .dia, .hora {
+        text-align: center;
     }
 }
