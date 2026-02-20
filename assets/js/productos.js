@@ -38,7 +38,6 @@ window.renderizarProductos = function(categoriaFiltro) {
         return;
     }
 
-    // 1. Renderizar primero los productos existentes
     productosFiltrados.forEach(p => {
         const card = document.createElement('article');
         card.className = 'tarjeta-producto-pagina';
@@ -63,7 +62,6 @@ window.renderizarProductos = function(categoriaFiltro) {
         contenedor.appendChild(card);
     });
 
-    // 2. Renderizar el botón de creación al FINAL solo si es admin
     if (esAdmin) {
         const cardNuevo = document.createElement('article');
         cardNuevo.className = 'tarjeta-producto-pagina tarjeta-nuevo-producto';
@@ -150,7 +148,6 @@ window.crearNuevoProducto = () => {
     };
 };
 
-// Función para mostrar que el archivo fue seleccionado
 window.actualizarNombreArchivo = (input) => {
     const label = document.getElementById('texto-archivo');
     if (input.files && input.files.length > 0) {
