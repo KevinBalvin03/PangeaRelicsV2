@@ -22,9 +22,9 @@ function gestionarSesionEnHeader() {
     const authContainer = document.getElementById('auth-container');
     if (!authContainer) return;
 
-    const usuarioSesion = JSON.parse(localStorage.getItem('usuarioSesion'));
+    const usuarioSesion = JSON.parse(sessionStorage.getItem('usuarioSesion'));
 
-    if (usuarioSesion) 
+    if (usuarioSesion) {
         authContainer.innerHTML = `
             <li class="enlace-nav nombre-usuario-saludo">
                 Hola, ${usuarioSesion.nombre}
@@ -38,7 +38,8 @@ function gestionarSesionEnHeader() {
 
         document.getElementById('cerrar-sesion').addEventListener('click', (e) => {
             e.preventDefault();
-            localStorage.removeItem('usuarioSesion');
+            sessionStorage.removeItem('usuarioSesion');
             window.location.href = "/index.html"; 
         });
+    }
 }

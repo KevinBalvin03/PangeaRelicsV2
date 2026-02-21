@@ -37,7 +37,8 @@ botonLogin.addEventListener('click', (e) => {
 
     sessionStorage.setItem('usuarioSesion', JSON.stringify({
         nombre: usuarioEncontrado.nombre,
-        correo: usuarioEncontrado.correo
+        correo: usuarioEncontrado.correo,
+        telefono: usuarioEncontrado.telefono
     }));
 
     window.location.href = "/index.html";
