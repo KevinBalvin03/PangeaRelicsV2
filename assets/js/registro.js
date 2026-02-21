@@ -44,7 +44,7 @@ formularioRegistro.addEventListener('submit', (e) => {
     usuariosGuardados.push(nuevoUsuario);
     localStorage.setItem('usuarios', JSON.stringify(usuariosGuardados));
 
-    localStorage.setItem('usuarioSesion', JSON.stringify({
+    sessionStorage.setItem('usuarioSesion', JSON.stringify({
         nombre: nuevoUsuario.nombre,
         correo: nuevoUsuario.correo,
         loginAt: new Date().toLocaleString()

@@ -35,7 +35,7 @@ botonLogin.addEventListener('click', (e) => {
 
     alert(`¡Bienvenido, ${usuarioEncontrado.nombre}!`);
 
-    localStorage.setItem('usuarioSesion', JSON.stringify({
+    sessionStorage.setItem('usuarioSesion', JSON.stringify({
         nombre: usuarioEncontrado.nombre,
         correo: usuarioEncontrado.correo
     }));
